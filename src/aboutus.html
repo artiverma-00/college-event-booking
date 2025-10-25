@@ -1,0 +1,236 @@
+<!doctype html>
+<html>
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="./output.css" rel="stylesheet">
+</head>
+
+<body class="bg-slate-100 overflow-x-hidden">
+    <div class="mb-12">
+        <!-- NAVBAR -->
+        <nav
+            class="w-full shadow-md px-6 md:px-12 py-3 flex justify-between items-center bg-white fixed top-0 left-0 z-50">
+
+            <!-- Logo -->
+            <div class="flex items-center space-x-2">
+                <img src="logo.svg" alt="Unifest Logo" class="h-8 w-8">
+                <div class="text-2xl font-extrabold text-gray-900">UniFests</div>
+            </div>
+
+            <!-- Menu Items -->
+            <div class="hidden md:flex font-medium text-gray-600">
+                <a href="index.html" class="mx-5 hover:text-blue-600 transition">Home</a>
+                <a href="events.html" class="mx-5 hover:text-blue-600 transition">Events</a>
+                <a href="club.html" class="mx-5 hover:text-blue-600 transition">Clubs</a>
+                <a href="aboutus.html" class="mx-5 hover:text-blue-600 transition">About Us</a>
+            </div>
+
+            <!-- Create Button -->
+            <button onclick="window.location.href='eventsform.html'"
+                class="hidden md:block px-5 py-1.5 bg-blue-600 text-white rounded-lg hover:bg-blue-800 transition">
+                Create Event
+            </button>
+
+            <!-- Mobile Toggle Button -->
+            <button id="menu-btn" class="md:hidden text-gray-800 text-3xl">
+                ☰
+            </button>
+        </nav>
+
+        <!-- Mobile Dropdown Menu -->
+        <div id="mobile-menu"
+            class="hidden flex-col bg-white text-gray-600 font-medium text-lg py-5 shadow-md px-6 space-y-4">
+            <a href="index.html" class="hover:text-blue-600 transition">Home</a>
+            <a href="events.html" class="hover:text-blue-600 transition">Events</a>
+            <a href="club.html" class="hover:text-blue-600 transition">Clubs</a>
+            <a href="aboutus.html" class="hover:text-blue-600 transition">About Us</a>
+
+            <button onclick="window.location.href='eventsform.html'"
+                class="w-full py-2 bg-blue-600 text-white rounded-lg hover:bg-blue-800 transition">
+                Create Event
+            </button>
+        </div>
+
+        <script>
+            const menuBtn = document.getElementById("menu-btn");
+            const mobileMenu = document.getElementById("mobile-menu");
+
+            menuBtn.addEventListener("click", () => {
+                mobileMenu.classList.toggle("hidden");
+            });
+        </script>
+    </div>
+
+    <div class="mb-12">
+        <section class="max-w-5xl  mx-auto px-6 py-12">
+            <h1 class="text-4xl font-bold text-gray-900 text-center">About UniFests</h1>
+            <p class="mt-3 text-lg text-gray-600 leading-relaxed">
+                Your gateway to amazing college experiences, connecting students through memorable events and fostering
+                campus community.
+            </p>
+        </section>
+
+        <!-- Mission Section -->
+        <section class="max-w-5xl mx-auto px-6 py-10 bg-white rounded-xl shadow">
+            <h2 class="text-2xl font-semibold text-center">Our Mission</h2>
+            <p class="mt-3 text-gray-600 text-lg">
+                Making college life more vibrant by connecting students with exciting events and opportunities to build
+                lasting memories.
+            </p>
+        </section>
+
+        <!-- Why UniFests Section -->
+        <section class="max-w-5xl mx-auto px-6 py-12">
+            <h2 class="text-2xl font-semibold">Why UniFests?</h2>
+
+            <div class="mt-6 grid md:grid-cols-2 gap-6">
+                <div class="flex gap-3 items-start">
+                    <span class="text-green-600 text-xl font-bold">✓</span>
+                    <p><strong>Easy Discovery</strong><br><span class="text-gray-600">Find all campus events in one
+                            place.</span></p>
+                </div>
+
+                <div class="flex gap-3 items-start">
+                    <span class="text-green-600 text-xl font-bold">✓</span>
+                    <p><strong>Simple Booking</strong><br><span class="text-gray-600">Register instantly, no
+                            hassle.</span></p>
+                </div>
+
+                <div class="flex gap-3 items-start">
+                    <span class="text-green-600 text-xl font-bold">✓</span>
+                    <p><strong>Track Everything</strong><br><span class="text-gray-600">Never miss an event
+                            again.</span></p>
+                </div>
+
+                <div class="flex gap-3 items-start">
+                    <span class="text-green-600 text-xl font-bold">✓</span>
+                    <p><strong>Student-Centered</strong><br><span class="text-gray-600">Built by students, for
+                            students.</span></p>
+                </div>
+            </div>
+        </section>
+
+        <!-- Benefits Section -->
+        <section class="max-w-5xl mx-auto px-6 py-12 bg-white rounded-xl shadow text-center">
+            <h2 class="text-2xl font-semibold">Benefits for Students</h2>
+            <p class="text-gray-600 mt-2">Discover how UniFests enhances your college experience</p>
+
+            <div class="grid md:grid-cols-3 gap-8 mt-8">
+                <div class="text-center">
+                    <div class="text-3xl">🌟</div>
+                    <h3 class="font-semibold text-lg mt-2">Diverse Events</h3>
+                    <p class="text-gray-600 text-sm mt-1">Cultural fests, tech summits, competitions & more.</p>
+                </div>
+
+                <div class="text-center">
+                    <div class="text-3xl">🤝</div>
+                    <h3 class="font-semibold text-lg mt-2">Community Building</h3>
+                    <p class="text-gray-600 text-sm mt-1">Make friends & join clubs that match your passion.</p>
+                </div>
+
+                <div class="text-center">
+                    <div class="text-3xl">🚀</div>
+                    <h3 class="font-semibold text-lg mt-2">Skill Development</h3>
+                    <p class="text-gray-600 text-sm mt-1">Workshops & challenges to boost your career.</p>
+                </div>
+            </div>
+        </section>
+    </div>
+
+    <!-- Subscription Section -->
+    <section class="bg-blue-500 py-16">
+        <div class="max-w-3xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
+            <h2 class="text-3xl sm:text-4xl font-extrabold text-white mb-4">Don't Miss Out!</h2>
+            <p class="text-blue-100 mb-8 text-lg sm:text-xl">
+                Subscribe for Fest Updates & Club Announcements
+            </p>
+
+            <!-- Subscription Form -->
+            <!--email border-->
+            <form class="flex flex-col sm:flex-row justify-center gap-4">
+                <input type="email" placeholder="Enter your email"
+                    class="w-full  bg-white sm:w-auto px-4 py-3 rounded-lg border border-transparent focus:outline-none focus:ring-2 focus:ring-green-400 transition-all"
+                    required />
+                <button type="submit"
+                    class="px-6 py-3 bg-green-500 hover:bg-green-600 rounded-lg text-white font-semibold transition-colors shadow-lg">
+                    Subscribe
+                </button>
+            </form>
+
+            <p class="text-blue-200 mt-4 text-sm">
+                We respect your privacy. No spam, only important updates.
+            </p>
+        </div>
+    </section>
+
+
+
+
+
+
+
+    <!-- footer start-->
+
+    <!-- Footer -->
+    <footer class="bg-gray-900 text-gray-300 py-16">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 grid grid-cols-1 md:grid-cols-4 gap-10">
+
+            <!-- About Section -->
+            <div>
+                <div class="flex items-center space-x-2">
+                    <img src="logo.svg" alt="Unifest Logo" class="h-8 w-8" />
+                    <div class="text-2xl font-extrabold text-white-600 ">Unifest</div>
+                </div>
+                <p class="text-gray-400 text-sm">
+                    Your gateway to amazing college experiences. Discover events, join clubs, and make memories that
+                    last a lifetime.
+                </p>
+            </div>
+
+            <!-- Quick Links -->
+            <div>
+                <h4 class="text-lg font-semibold text-white mb-4">Quick Links</h4>
+                <ul class="space-y-2 text-gray-400 text-sm">
+                    <li><a href="#home" class="hover:text-white">Home</a></li>
+                    <li><a href="#events" class="hover:text-white">Events</a></li>
+                    <li><a href="#clubs" class="hover:text-white">Clubs</a></li>
+                    <li><a href="#bookings" class="hover:text-white">My Bookings</a></li>
+                    <li><a href="#about" class="hover:text-white">About</a></li>
+                </ul>
+            </div>
+
+            <!-- Student Helpdesk -->
+            <div>
+                <h4 class="text-lg font-semibold text-white mb-4">Student Helpdesk</h4>
+                <ul class="space-y-2 text-gray-400 text-sm">
+                    <li><a href="mailto:help@unifests.edu" class="hover:text-white">help@unifests.edu</a></li>
+                    <li><a href="#faq" class="hover:text-white">FAQ</a></li>
+                    <li><a href="#guidelines" class="hover:text-white">Guidelines</a></li>
+                    <li><a href="#college-portal" class="hover:text-white">College Portal</a></li>
+                    <li><a href="#student-login" class="hover:text-white">Student Login</a></li>
+                    <li><a href="#academic-calendar" class="hover:text-white">Academic Calendar</a></li>
+                    <li><a href="#campus-map" class="hover:text-white">Campus Map</a></li>
+                    <li><a href="#library-portal" class="hover:text-white">Library Portal</a></li>
+                </ul>
+            </div>
+
+            <!-- Policies & Contact -->
+            <div>
+                <h4 class="text-lg font-semibold text-white mb-4">Policies & Contact</h4>
+                <ul class="space-y-2 text-gray-400 text-sm">
+                    <li><a href="#privacy" class="hover:text-white">Privacy Policy</a></li>
+                    <li><a href="#terms" class="hover:text-white">Terms of Service</a></li>
+                    <li><a href="#contact" class="hover:text-white">Contact Us</a></li>
+                </ul>
+                <p class="text-gray-500 text-xs mt-6">© 2025 UniFests. All Rights Reserved.</p>
+            </div>
+
+        </div>
+    </footer>
+
+    <!-- footer end-->
+</body>
+
+</html>

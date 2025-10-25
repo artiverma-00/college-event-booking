@@ -1,0 +1,490 @@
+<!doctype html>
+<html>
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="./output.css" rel="stylesheet">
+</head>
+
+<body class="bg-slate-100 overflow-x-hidden">
+    <nav class="w-full h-12 bg-white-900 shadow-md flex justify-between items-center px-6 md:px-12 bg-transparent">
+        <!-- left side unifest logo -->
+        <div class="flex items-center space-x-2">
+            <img src="logo.svg" alt="Unifest Logo" class="h-8 w-8" />
+            <div class="text-2xl font-extrabold text-gray-1200 ">Unifest</div>
+        </div>
+        <!-- center side 4 option home about us events contact left login/signup  with hover effect blue-->
+        <div class=" font-semibold text-gray-600 md:flex">
+            <a class="mx-[25px] cursor-pointer  hover:text-blue-600 text-md transition-all active:scale-95"
+                href="">Home</a>
+            <a class="mx-[25px] cursor-pointer hover:text-blue-600 text-md transition-all active:scale-95" href="">About
+                Us</a>
+            <a class="mx-[25px] cursor-pointer  hover:text-blue-600 text-md transition-all active:scale-95"
+                href="">Events</a>
+            <a class="mx-[25px] cursor-pointer  hover:text-blue-600 text-md transition-all active:scale-95"
+                href="">Contact</a>
+        </div>
+        <!-- right side login/signup with button hover-->
+        <button
+            class="bg-blue-600 text-white px-2 py-1 rounded-md hover:bg-slate-50 border-[1px] border-blue-600 hover:text-blue-600 active:scale-95 cursor-pointer font-medium text-md transition-all ">Create
+            event</button>
+
+    </nav>
+    <!--navbar end-->
+
+
+    <!-- hero section for college event booking with background image and text and button dynamic hero section for college event booking two three slides auto play img or video -->
+
+    <!-- Hero Section -->
+    <section class="relative bg-gradient-to-r from-blue-600 to-blue-600 text-white">
+        <div
+            class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-24 lg:py-32 flex flex-col-reverse lg:flex-row items-center justify-between">
+
+            <!-- Text Content -->
+            <div class="lg:w-1/2 text-center lg:text-left">
+                <h1 class="text-4xl sm:text-5xl font-extrabold mb-4 leading-tight">
+                    Discover. Book. Celebrate 🎉
+                </h1>
+                <p class="text-lg sm:text-xl text-blue-100 mb-8">
+                    From cultural nights to tech fests, explore all campus events in one place.
+                </p>
+                <div class="flex flex-col sm:flex-row gap-4 justify-center lg:justify-start">
+                    <a href="#events"
+                        class="px-6 py-3 bg-green-500 hover:bg-green-600 rounded-lg font-semibold shadow-lg transition-all transform hover:scale-105 active:scale-95">
+                        Explore Events
+                    </a>
+                    <a href="#clubs"
+                        class="px-6 py-3 border border-white hover:bg-white hover:text-blue-700 rounded-lg font-semibold transition-all transform hover:scale-105 active:scale-95">
+                        Join a Club
+                    </a>
+                </div>
+            </div>
+
+            <!-- Hero Image / Illustration -->
+            <div class="lg:w-1/2 mb-10 lg:mb-0 flex justify-center">
+                <img src="hero.png" alt="Students Celebrating" class="w-full max-w-lg animate-fadeIn">
+            </div>
+
+            <!-- Optional Decorations (floating shapes / circles) -->
+            <div
+                class="absolute top-0 left-0 w-32 h-32 bg-green-400 opacity-30 rounded-full -translate-x-1/2 -translate-y-1/2 animate-pulse">
+            </div>
+            <div
+                class="absolute bottom-0 right-0 w-48 h-48 bg-blue-400 opacity-20 rounded-full translate-x-1/3 translate-y-1/4 animate-pulse">
+            </div>
+
+        </div>
+    </section>
+
+    <!-- hero section end-->
+
+    <!-- event section start  5 card with image, title, date, and button to book all card fit in the screen also b/w the card enough gap -->
+
+    <!-- Upcoming Events Section -->
+    <section class="bg-gray-50 py-16" id="upcoming-events">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <!-- Section Header -->
+            <div class="text-center mb-12">
+                <h2 class="text-3xl font-extrabold text-gray-900 mb-2">🎉 Upcoming Events</h2>
+                <p class="text-gray-600 text-lg sm:text-xl">
+                    Don't miss out on these exciting events happening soon on campus!
+                </p>
+            </div>
+
+            <!-- Events Grid -->
+            <div class="grid grid-cols-2 md:grid-cols-2 lg:grid-cols-4 gap-8">
+
+                <!-- Event 1 -->
+                <div
+                    class="bg-white rounded-2xl shadow-lg hover:shadow-2xl transition-shadow duration-300 overflow-hidden flex flex-col justify-between p-1">
+                    <img src="/images/cultural-fest-2024.jpg" alt="Annual Cultural Fest 2024"
+                        class="w-full h-48 object-cover rounded-t-2xl">
+                    <div class="p-4 flex flex-col flex-1">
+                        <span class="text-sm font-semibold text-blue-600 mb-1">Cultural</span>
+                        <h3 class="text-lg font-semibold text-gray-900 mb-2">Annual Cultural Fest 2024</h3>
+
+                        <div class="text-sm text-gray-500 mb-2 space-y-1 flex-1">
+                            <p>📅 Date: March 15, 2024</p>
+                            <p>⏰ Time: 6:00 PM - 11:00 PM</p>
+                            <p>📍 Venue: Main Auditorium</p>
+                            <p>Seats Left: <span class="font-semibold text-gray-900">45/200</span></p>
+                            <p>Free</p>
+                        </div>
+                        <button
+                            class="mt-3 bg-blue-600 text-white py-2 rounded-lg hover:bg-blue-700 transition-colors font-semibold cursor-pointer active:scale-95">Book
+                            Now</button>
+                    </div>
+                </div>
+
+                <!-- Event 2 -->
+                <div justify-between
+                    class="bg-white rounded-2xl shadow-lg hover:shadow-2xl transition-shadow duration-300 overflow-hidden flex flex-col justify-between p-1">
+                    <img src="/images/basketball-championship.jpg" alt="Inter-College Basketball Championship"
+                        class="w-full h-48 object-cover rounded-t-2xl">
+                    <div class="p-4 flex flex-col flex-1">
+                        <span class="text-sm font-semibold text-red-500 mb-1">Sports</span>
+                        <h3 class="text-lg font-semibold text-gray-900 mb-2">Inter-College Basketball Championship</h3>
+
+                        <div class="text-sm text-gray-500 mb-2 space-y-1 flex-1">
+                            <p>📅 Date: March 20, 2024</p>
+                            <p>⏰ Time: 2:00 PM - 8:00 PM</p>
+                            <p>📍 Venue: Sports Complex</p>
+
+                            <p>Seats Left: <span class="font-semibold text-gray-900">120/300</span></p>
+                            <p>₹50</p>
+
+                        </div>
+                        <button
+                            class="mt-3 bg-blue-600 text-white py-2 rounded-lg hover:bg-blue-700 transition-colors font-semibold cursor-pointer active:scale-95">Book
+                            Now</button>
+                    </div>
+                </div>
+
+                <!-- Event 3 -->
+                <div
+                    class="bg-white rounded-2xl shadow-lg hover:shadow-2xl transition-shadow duration-300 overflow-hidden flex flex-col justify-between p-1">
+                    <img src="/images/tech-innovation-summit.jpg" alt="Tech Innovation Summit"
+                        class="w-full h-48 object-cover rounded-t-2xl">
+                    <div class="p-4 flex flex-col flex-1">
+                        <span class="text-sm font-semibold text-yellow-500 mb-1">Tech - Few seats left!</span>
+                        <h3 class="text-lg font-semibold text-gray-900 mb-2">Tech Innovation Summit</h3>
+
+                        <div class="text-sm text-gray-500 mb-2 space-y-1 flex-1">
+                            <p>📅 Date: March 25, 2024</p>
+                            <p>⏰ Time: 9:00 AM - 5:00 PM</p>
+                            <p>📍 Venue: Conference Hall A</p>
+                            <p>Seats Left: <span class="font-semibold text-gray-900">8/100</span></p>
+                            <p>₹100</p>
+                        </div>
+                        <button
+                            class="mt-3 bg-blue-600 text-white py-2 rounded-lg hover:bg-blue-700 transition-colors font-semibold cursor-pointer active:scale-95">Book
+                            Now</button>
+                    </div>
+                </div>
+
+                <!-- Event 4 -->
+                <div
+                    class="bg-white rounded-2xl shadow-lg hover:shadow-2xl transition-shadow duration-300 overflow-hidden flex flex-col justify-between p-1">
+                    <img src="/images/spring-music-festival.jpg" alt="Spring Music Festival"
+                        class="w-full h-48 object-cover rounded-t-2xl">
+                    <div class="p-4 flex flex-col flex-1">
+                        <span class="text-sm font-semibold text-blue-600 mb-1">Cultural</span>
+                        <h3 class="text-lg font-semibold text-gray-900 mb-2">Spring Music Festival</h3>
+                        <div class="text-sm text-gray-500 mb-2 space-y-1 flex-1">
+                            <p>📅 Date: April 2, 2024</p>
+                            <p>⏰ Time: 4:00 PM - 10:00 PM</p>
+                            <p>📍 Venue: Outdoor Amphitheater</p>
+                            <p>Seats Left: <span class="font-semibold text-gray-900">180/500</span></p>
+                            <p>₹75</p>
+                        </div>
+                        <button
+                            class="mt-3 bg-blue-600 text-white py-2 rounded-lg hover:bg-blue-700 transition-colors font-semibold cursor-pointer active:scale-95">Book
+                            Now</button>
+                    </div>
+                </div>
+
+            </div>
+
+            <!-- See All Events Button -->
+            <div class="text-center mt-12">
+                <a href="#all-events"
+                    class="inline-block px-8 py-3 bg-green-500 hover:bg-green-600 text-white rounded-lg font-semibold transition-colors">
+                    See All Events
+                </a>
+            </div>
+
+        </div>
+    </section>
+    <!-- event section end-->
+
+
+    <!--college clubs section start-->
+    <!-- college clubs Section -->
+    <section class="bg-white py-14" id="clubs">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <!-- Section Title -->
+            <h2 class="text-3xl font-extrabold text-gray-900 mb-6 text-center">🔥 college clubs</h2>
+            <p class="text-gray-600 mb-8 text-center">Join campus clubs and never miss out on updates and events!</p>
+
+            <!-- Horizontal Scrollable Clubs -->
+            <div class="flex space-x-6 overflow-x-auto overflow-y-hidden scrollbar-hide py-4">
+
+                <!-- Club Card 1 -->
+                <div
+                    class="min-w-[200px] bg-blue-50 rounded-xl shadow-md hover:shadow-xl transition-shadow duration-300 flex flex-col items-center p-4">
+                    <img class="w-16 h-16 rounded-full mb-3" src="/images/tech-club.png" alt="Tech Club">
+                    <h3 class="text-lg font-semibold text-gray-900 mb-1">Tech Club</h3>
+                    <p class="text-sm text-gray-500 mb-3 text-center">Coding, hackathons, and tech workshops.</p>
+                    <button
+                        class="bg-blue-500 text-white py-2 px-4 rounded-lg hover:bg-blue-600 transition-colors text-sm">Join
+                        Now</button>
+                </div>
+
+                <!-- Club Card 2 -->
+                <div
+                    class="min-w-[200px] bg-blue-50 rounded-xl shadow-md hover:shadow-xl transition-shadow duration-300 flex flex-col items-center p-4">
+                    <img class="w-16 h-16 rounded-full mb-3" src="/images/cultural-club.png" alt="Cultural Club">
+                    <h3 class="text-lg font-semibold text-gray-900 mb-1">Cultural Club</h3>
+                    <p class="text-sm text-gray-500 mb-3 text-center">Dance, music, theatre, and cultural fests.</p>
+                    <button
+                        class="bg-blue-500 text-white py-2 px-4 rounded-lg hover:bg-blue-600 transition-colors text-sm">Join
+                        Now</button>
+                </div>
+
+                <!-- Club Card 3 -->
+                <div
+                    class="min-w-[200px] bg-blue-50 rounded-xl shadow-md hover:shadow-xl transition-shadow duration-300 flex flex-col items-center p-4">
+                    <img class="w-16 h-16 rounded-full mb-3" src="/images/sports-club.png" alt="Sports Club">
+                    <h3 class="text-lg font-semibold text-gray-900 mb-1">Sports Club</h3>
+                    <p class="text-sm text-gray-500 mb-3 text-center">Football, cricket, athletics, and more.</p>
+                    <button
+                        class="bg-blue-500 text-white py-2 px-4 rounded-lg hover:bg-blue-600 transition-colors text-sm">Join
+                        Now</button>
+                </div>
+
+                <!-- Club Card 4 -->
+                <div
+                    class="min-w-[200px] bg-blue-50 rounded-xl shadow-md hover:shadow-xl transition-shadow duration-300 flex flex-col items-center p-4">
+                    <img class="w-16 h-16 rounded-full mb-3" src="/images/photography-club.png" alt="Photography Club">
+                    <h3 class="text-lg font-semibold text-gray-900 mb-1">Photography Club</h3>
+                    <p class="text-sm text-gray-500 mb-3 text-center">Photography tips, photo walks, and contests.</p>
+                    <button
+                        class="bg-blue-500 text-white py-2 px-4 rounded-lg hover:bg-blue-600 transition-colors text-sm">Join
+                        Now</button>
+                </div>
+
+                <!-- Add more club cards as needed -->
+
+            </div>
+        </div>
+        <!-- See All Events Button -->
+        <div class="text-center mt-12">
+            <a href="#all-events"
+                class="inline-block px-8 py-3 bg-green-500 hover:bg-green-600 text-white rounded-lg font-semibold transition-colors">
+                explore all clubs
+            </a>
+        </div>
+    </section>
+
+
+    <!--college clubs section end-->
+
+
+    <!-- Fest Highlights & Stats Section -->
+    <section class="bg-gray-50 py-16" id="highlights">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <!-- Section Title -->
+            <div class="text-center mb-12">
+                <h2 class="text-3xl font-extrabold text-gray-900 mb-4">✨ Fest Highlights</h2>
+                <p class="text-gray-600 text-lg sm:text-xl">
+                    Relive the amazing moments from our previous events and get excited for what's coming next!
+                </p>
+            </div>
+
+            <!-- Highlight Cards -->
+            <div class="grid gri md:grid-cols-3 gap-8 mb-12">
+                <!-- Card 1 -->
+                <div
+                    class="bg-white rounded-2xl shadow-lg hover:shadow-2xl transition-shadow duration-300 overflow-hidden flex flex-col justify-between ">
+                    <img src="/images/cultural-fest.jpg" alt="Cultural Fest 2023" class="w-full h-48 object-cover">
+                    <div class="p-4">
+                        <h3 class="text-lg font-semibold text-gray-900 mb-1">Cultural Fest 2023</h3>
+                        <p class="text-gray-600 text-sm">A vibrant celebration of dance, music, and art by students.</p>
+                    </div>
+                </div>
+
+                <!-- Card 2 -->
+                <div
+                    class="bg-white rounded-2xl shadow-lg hover:shadow-2xl transition-shadow duration-300 overflow-hidden flex flex-col justify-between ">
+                    <img src="/images/tech-summit.jpg" alt="Tech Summit 2023" class="w-full h-48 object-cover">
+                    <div class="p-4">
+                        <h3 class="text-lg font-semibold text-gray-900 mb-1">Tech Summit 2023</h3>
+                        <p class="text-gray-600 text-sm">Innovation, workshops, and coding competitions for students.
+                        </p>
+                    </div>
+                </div>
+
+                <!-- Card 3 -->
+                <div
+                    class="bg-white rounded-2xl shadow-lg hover:shadow-2xl transition-shadow duration-300 overflow-hidden flex flex-col justify-between ">
+                    <img src="/images/sports-tournament.jpg" alt="Sports Tournament" class="w-full h-48 object-cover">
+                    <div class="p-4">
+                        <h3 class="text-lg font-semibold text-gray-900 mb-1">Sports Tournament</h3>
+                        <p class="text-gray-600 text-sm">Competitive sports events and fun games for all students.</p>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Key Stats -->
+            <div class="grid grid-cols-1 sm:grid-cols-3 gap-8 text-center">
+                <div>
+                    <h3 class="text-4xl font-extrabold text-blue-600 mb-2">2000+</h3>
+                    <p class="text-gray-600 font-medium">Students Participated</p>
+                </div>
+                <div>
+                    <h3 class="text-4xl font-extrabold text-blue-600 mb-2">50+</h3>
+                    <p class="text-gray-600 font-medium">Events Last Year</p>
+                </div>
+                <div>
+                    <h3 class="text-4xl font-extrabold text-blue-600 mb-2">25+</h3>
+                    <p class="text-gray-600 font-medium">Active Clubs</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+
+    <!-- review section start-->
+    <!-- Testimonials Section -->
+    <section class="bg-gray-50 py-16" id="testimonials">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
+            <!-- Section Title -->
+            <h2 class="text-3xl font-extrabold text-gray-900 mb-4">What Our Students Say</h2>
+            <p class="text-gray-600 mb-12">Hear from students who have explored, booked, and celebrated campus events
+                with UniFests.</p>
+
+            <!-- Testimonials Grid -->
+            <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
+
+                <!-- Testimonial 1 -->
+                <div class="bg-white p-6 rounded-xl shadow-md hover:shadow-xl transition-shadow duration-300">
+                    <p class="text-gray-700 mb-4">"UniFests made it so easy to register for events. I never miss a fest
+                        now!"</p>
+                    <div class="flex items-center justify-center">
+                        <img class="w-12 h-12 rounded-full mr-3" src="/images/student1.jpg" alt="Student 1">
+                        <div class="text-left">
+                            <p class="font-semibold text-gray-900">Priya Sharma</p>
+                            <p class="text-sm text-gray-500">Computer Science, 3rd Year</p>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Testimonial 2 -->
+                <div class="bg-white p-6 rounded-xl shadow-md hover:shadow-xl transition-shadow duration-300">
+                    <p class="text-gray-700 mb-4">"The booking flow is super smooth, and I can track my events easily."
+                    </p>
+                    <div class="flex items-center justify-center">
+                        <img class="w-12 h-12 rounded-full mr-3" src="/images/student2.jpg" alt="Student 2">
+                        <div class="text-left">
+                            <p class="font-semibold text-gray-900">Rahul Verma</p>
+                            <p class="text-sm text-gray-500">Electronics, 2nd Year</p>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Testimonial 3 -->
+                <div class="bg-white p-6 rounded-xl shadow-md hover:shadow-xl transition-shadow duration-300">
+                    <p class="text-gray-700 mb-4">"I love the club section! Joining my favorite clubs is effortless."
+                    </p>
+                    <div class="flex items-center justify-center">
+                        <img class="w-12 h-12 rounded-full mr-3" src="hero.png" alt="Student 3">
+                        <div class="text-left">
+                            <p class="font-semibold text-gray-900">Sneha Gupta</p>
+                            <p class="text-sm text-gray-500">Mechanical, 4th Year</p>
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+    </section>
+    <!-- review section end-->
+
+    <!-- Subscription Section -->
+    <section class="bg-blue-500 py-16">
+        <div class="max-w-3xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
+            <h2 class="text-3xl sm:text-4xl font-extrabold text-white mb-4">Don't Miss Out!</h2>
+            <p class="text-blue-100 mb-8 text-lg sm:text-xl">
+                Subscribe for Fest Updates & Club Announcements
+            </p>
+
+            <!-- Subscription Form -->
+            <!--email border-->
+            <form class="flex flex-col sm:flex-row justify-center gap-4">
+                <input type="email" placeholder="Enter your email"
+                    class="w-full  bg-white sm:w-auto px-4 py-3 rounded-lg border border-transparent focus:outline-none focus:ring-2 focus:ring-green-400 transition-all"
+                    required />
+                <button type="submit"
+                    class="px-6 py-3 bg-green-500 hover:bg-green-600 rounded-lg text-white font-semibold transition-colors shadow-lg">
+                    Subscribe
+                </button>
+            </form>
+
+            <p class="text-blue-200 mt-4 text-sm">
+                We respect your privacy. No spam, only important updates.
+            </p>
+        </div>
+    </section>
+
+
+
+
+
+
+
+
+
+    <!-- footer start-->
+
+    <!-- Footer -->
+    <footer class="bg-gray-900 text-gray-300 py-16">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 grid grid-cols-1 md:grid-cols-4 gap-10">
+
+            <!-- About Section -->
+            <div>
+                <div class="flex items-center space-x-2">
+                    <img src="logo.svg" alt="Unifest Logo" class="h-8 w-8" />
+                    <div class="text-2xl font-extrabold text-white-600 ">Unifest</div>
+                </div>
+                <p class="text-gray-400 text-sm">
+                    Your gateway to amazing college experiences. Discover events, join clubs, and make memories that
+                    last a lifetime.
+                </p>
+            </div>
+
+            <!-- Quick Links -->
+            <div>
+                <h4 class="text-lg font-semibold text-white mb-4">Quick Links</h4>
+                <ul class="space-y-2 text-gray-400 text-sm">
+                    <li><a href="#home" class="hover:text-white">Home</a></li>
+                    <li><a href="#events" class="hover:text-white">Events</a></li>
+                    <li><a href="#clubs" class="hover:text-white">Clubs</a></li>
+                    <li><a href="#bookings" class="hover:text-white">My Bookings</a></li>
+                    <li><a href="#about" class="hover:text-white">About</a></li>
+                </ul>
+            </div>
+
+            <!-- Student Helpdesk -->
+            <div>
+                <h4 class="text-lg font-semibold text-white mb-4">Student Helpdesk</h4>
+                <ul class="space-y-2 text-gray-400 text-sm">
+                    <li><a href="mailto:help@unifests.edu" class="hover:text-white">help@unifests.edu</a></li>
+                    <li><a href="#faq" class="hover:text-white">FAQ</a></li>
+                    <li><a href="#guidelines" class="hover:text-white">Guidelines</a></li>
+                    <li><a href="#college-portal" class="hover:text-white">College Portal</a></li>
+                    <li><a href="#student-login" class="hover:text-white">Student Login</a></li>
+                    <li><a href="#academic-calendar" class="hover:text-white">Academic Calendar</a></li>
+                    <li><a href="#campus-map" class="hover:text-white">Campus Map</a></li>
+                    <li><a href="#library-portal" class="hover:text-white">Library Portal</a></li>
+                </ul>
+            </div>
+
+            <!-- Policies & Contact -->
+            <div>
+                <h4 class="text-lg font-semibold text-white mb-4">Policies & Contact</h4>
+                <ul class="space-y-2 text-gray-400 text-sm">
+                    <li><a href="#privacy" class="hover:text-white">Privacy Policy</a></li>
+                    <li><a href="#terms" class="hover:text-white">Terms of Service</a></li>
+                    <li><a href="#contact" class="hover:text-white">Contact Us</a></li>
+                </ul>
+                <p class="text-gray-500 text-xs mt-6">© 2025 UniFests. All Rights Reserved.</p>
+            </div>
+
+        </div>
+    </footer>
+
+    <!-- footer end-->
+</body>
+
+</html>
