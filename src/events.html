@@ -62,6 +62,8 @@
             });
         </script>
     </div>
+    
+
     <!--navbar end-->
 
 
@@ -112,7 +114,7 @@
                         <p>Seats Left: <span class="font-semibold text-gray-900">45/200</span></p>
                         <p class="text-green-600 font-semibold">Free</p>
                     </div>
-                    <button class="mt-4 bg-blue-600 text-white py-2 rounded-lg hover:bg-blue-700">Book Now</button>
+                    <button class="book-btn mt-4 bg-blue-600 text-white py-2 rounded-lg hover:bg-blue-700">Book Now</button>
                 </div>
 
                 <!-- Event 2 -->
@@ -125,7 +127,7 @@
                         <p>Seats Left: <span class="font-semibold text-gray-900">120/300</span></p>
                         <p class="text-gray-900 font-semibold">₹50</p>
                     </div>
-                    <button class="mt-4 bg-blue-600 text-white py-2 rounded-lg hover:bg-blue-700">Book Now</button>
+                    <button class=" book-btn mt-4 bg-blue-600 text-white py-2 rounded-lg hover:bg-blue-700">Book Now</button>
                 </div>
 
                 <!-- Event 3 -->
@@ -138,7 +140,7 @@
                         <p>Seats Left: <span class="font-semibold text-red-600">8/100</span> (Few seats left!)</p>
                         <p class="text-gray-900 font-semibold">₹100</p>
                     </div>
-                    <button class="mt-4 bg-blue-600 text-white py-2 rounded-lg hover:bg-blue-700">Book Now</button>
+                    <button class="book-btn mt-4 bg-blue-600 text-white py-2 rounded-lg hover:bg-blue-700">Book Now</button>
                 </div>
 
                 <!-- Event 4 -->
@@ -151,7 +153,7 @@
                         <p>Seats Left: <span class="font-semibold text-gray-900">180/500</span></p>
                         <p class="text-gray-900 font-semibold">₹75</p>
                     </div>
-                    <button class="mt-4 bg-blue-600 text-white py-2 rounded-lg hover:bg-blue-700">Book Now</button>
+                    <button class="book-btn mt-4 bg-blue-600 text-white py-2 rounded-lg hover:bg-blue-700">Book Now</button>
                 </div>
 
                 <!-- Event 5 -->
@@ -164,7 +166,7 @@
                         <p>Seats Left: <span class="font-semibold text-gray-900">25/40</span></p>
                         <p class="text-green-600 font-semibold">Free</p>
                     </div>
-                    <button class="mt-4 bg-blue-600 text-white py-2 rounded-lg hover:bg-blue-700">Book Now</button>
+                    <button class="book-btn mt-4 bg-blue-600 text-white py-2 rounded-lg hover:bg-blue-700">Book Now</button>
                 </div>
 
                 <!-- Event 6 - Sold Out -->
@@ -246,6 +248,191 @@
     </footer>
 
     <!-- footer end-->
+
+    <!-- Booking Popup -->
+<!-- Booking Popup -->
+<div id="booking-modal"
+  class="hidden fixed inset-0 bg-blue-500/40 backdrop-blur-md justify-center items-center z-50 transition-opacity duration-300">
+  <div id="booking-content"
+    class="bg-white/90 backdrop-blur-xl rounded-3xl shadow-2xl p-8 w-full max-w-md relative text-center animate-fadeIn">
+
+    <!-- Close Button -->
+    <button id="close-booking"
+      class="absolute top-3 right-3 text-gray-500 hover:text-gray-800 text-xl font-bold">✖</button>
+
+    <h2 class="text-2xl font-extrabold text-gray-800 mb-2">Book Your Seat</h2>
+    <p class="text-gray-500 mb-6">Fill in your details to book your spot for this event.</p>
+
+    <form id="booking-form" class="space-y-4">
+      <input type="text" id="user-name" placeholder="Full Name"
+        class="w-full border rounded-lg px-4 py-2 focus:ring-2 focus:ring-blue-400 outline-none" required>
+      <input type="email" id="user-email" placeholder="Email"
+        class="w-full border rounded-lg px-4 py-2 focus:ring-2 focus:ring-blue-400 outline-none" required>
+      <input type="text" id="event-name" placeholder="Event Name"
+        class="w-full border rounded-lg px-4 py-2 focus:ring-2 focus:ring-blue-400 outline-none bg-gray-50" readonly>
+      <select id="seat-count"
+        class="w-full border rounded-lg px-4 py-2 focus:ring-2 focus:ring-blue-400 outline-none text-gray-600" required>
+        <option selected disabled>Select Number of Seats</option>
+        <option>1</option>
+        <option>2</option>
+        <option>3</option>
+        <option>4</option>
+      </select>
+      <button type="submit"
+        class="w-full bg-blue-600 text-white py-2 rounded-lg hover:bg-blue-700 transition font-semibold">
+        Confirm Booking
+      </button>
+    </form>
+  </div>
+</div>
+
+<!-- Aesthetic Ticket Confirmation -->
+<div id="ticket-popup"
+  class="hidden fixed inset-0 bg-blue-500/30 backdrop-blur-md justify-center items-center z-50">
+  <div class="bg-white rounded-3xl shadow-2xl p-6 text-center w-96 relative animate-ticketSlide">
+
+    <!-- Close Ticket -->
+    <button id="close-ticket"
+      class="absolute top-3 right-3 text-gray-500 hover:text-gray-800 text-xl font-bold">✖</button>
+
+    <!-- Ticket Header -->
+    <div class="mb-4">
+      <h2 class="text-3xl font-extrabold text-blue-700">🎟️ UniFests Pass</h2>
+      <p class="text-gray-500 text-sm">Your booking is confirmed!</p>
+    </div>
+
+    <!-- Ticket Body -->
+    <div class="border-dashed border-2 border-gray-300 rounded-xl p-4 text-left">
+      <p class="text-gray-700"><strong>Name:</strong> <span id="ticket-name"></span></p>
+      <p class="text-gray-700"><strong>Event:</strong> <span id="ticket-event"></span></p>
+      <p class="text-gray-700"><strong>Seats:</strong> <span id="ticket-seats"></span></p>
+      <p class="text-gray-700"><strong>Email:</strong> <span id="ticket-email"></span></p>
+    </div>
+
+    <!-- Ticket Footer -->
+    <div class="mt-6">
+      <p class="text-sm text-gray-500">Show this at entry gate for access.</p>
+      <div class="w-24 h-1 bg-blue-600 mx-auto mt-3 rounded-full"></div>
+    </div>
+  </div>
+</div>
+
+<!-- Animations -->
+<style>
+  @keyframes fadeIn {
+    from {
+      opacity: 0;
+      transform: scale(0.95);
+    }
+
+    to {
+      opacity: 1;
+      transform: scale(1);
+    }
+  }
+
+  @keyframes ticketSlide {
+    from {
+      opacity: 0;
+      transform: translateY(30px);
+    }
+
+    to {
+      opacity: 1;
+      transform: translateY(0);
+    }
+  }
+
+  .animate-fadeIn {
+    animation: fadeIn 0.3s ease-out;
+  }
+
+  .animate-ticketSlide {
+    animation: ticketSlide 0.4s ease-out;
+  }
+</style>
+
+<!-- Inline JavaScript -->
+<script>
+  // Select elements
+  const bookButtons = document.querySelectorAll(".book-btn");
+  const bookingModal = document.getElementById("booking-modal");
+  const closeBooking = document.getElementById("close-booking");
+  const bookingForm = document.getElementById("booking-form");
+
+  const ticketPopup = document.getElementById("ticket-popup");
+  const closeTicket = document.getElementById("close-ticket");
+
+  const userName = document.getElementById("user-name");
+  const userEmail = document.getElementById("user-email");
+  const eventNameField = document.getElementById("event-name");
+  const seatCount = document.getElementById("seat-count");
+
+  const ticketName = document.getElementById("ticket-name");
+  const ticketEvent = document.getElementById("ticket-event");
+  const ticketSeats = document.getElementById("ticket-seats");
+  const ticketEmail = document.getElementById("ticket-email");
+
+  // Open booking popup
+  bookButtons.forEach(button => {
+    button.addEventListener("click", () => {
+      const eventCard = button.closest("div");
+      const eventTitle = eventCard.querySelector("h3, h2")?.textContent || "Event";
+      eventNameField.value = eventTitle.trim();
+
+      bookingModal.classList.remove("hidden");
+      bookingModal.classList.add("flex");
+    });
+  });
+
+  // Close booking modal
+  closeBooking.addEventListener("click", () => {
+    bookingModal.classList.add("hidden");
+    bookingModal.classList.remove("flex");
+  });
+
+  // Booking confirmation logic
+  bookingForm.addEventListener("submit", (e) => {
+    e.preventDefault();
+
+    // Fill ticket details
+    ticketName.textContent = userName.value;
+    ticketEvent.textContent = eventNameField.value;
+    ticketSeats.textContent = seatCount.value;
+    ticketEmail.textContent = userEmail.value;
+
+    // Close booking form
+    bookingModal.classList.add("hidden");
+    bookingModal.classList.remove("flex");
+
+    // Show ticket popup
+    ticketPopup.classList.remove("hidden");
+    ticketPopup.classList.add("flex");
+
+    // Reset form
+    bookingForm.reset();
+  });
+
+  // Close ticket popup
+  closeTicket.addEventListener("click", () => {
+    ticketPopup.classList.add("hidden");
+    ticketPopup.classList.remove("flex");
+  });
+
+  // Click outside to close
+  window.addEventListener("click", (e) => {
+    if (e.target === bookingModal) {
+      bookingModal.classList.add("hidden");
+      bookingModal.classList.remove("flex");
+    }
+    if (e.target === ticketPopup) {
+      ticketPopup.classList.add("hidden");
+      ticketPopup.classList.remove("flex");
+    }
+  });
+</script>
+
+
 </body>
 
 </html>
